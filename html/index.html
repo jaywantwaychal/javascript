@@ -8,11 +8,40 @@
 <body>
 
 	<header>
-		<h1>Learning Javascript</h1>
+		<h1 id="heading">Learning Javascript</h1>
+		<h2 id="dateShow"></h2>
 	</header>
 	<section class="container">
 		
+		<button  onclick="doClick()">Click Me</button>
+
+		<button onclick="changeText(this)">Click TO Change Text</button>
+
+		<button onclick="getDate()">Get Date</button>
 	</section>
 
+	<section class="loginForm">
+		<form action="test.php" method="post" onsubmit="return validateForm()" name="myForm">
+			<div class="rowData">
+				<label>First Name </label>
+				<input id="firstName" type="text" name="firstName">
+				<label id="fnameError"></label>
+			</div>
+			<div class="rowData">
+				<label>Last Name </label>
+				<input type="text" name="text">
+			</div>
+			<div class="rowData">
+				<label>Heading Color </label>
+				<select onchange="changeHeading(this)">
+					<option value="red">Red</option>
+					<option value="green">Green</option>
+				</select>
+			</div>
+			<div class="rowData">
+				<input type="submit" value="Submit">	
+			</div>
+		</form>
+	</section>
 </body>
 </html>
